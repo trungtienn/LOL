@@ -111,6 +111,8 @@ body {
     position: relative;
     left: 40%;
     bottom: 60px;
+    height: 122px;
+    width: 122px;
 }
 
 .imageChamp {
@@ -126,12 +128,14 @@ body {
     transition: opacity .4s ease;
     width: 100%;
 
+
 }
 
 .frame {
     display: block;
     position: relative;
     z-index: 5;
+    max-width: 122px;
 }
 
 .ChampionRace {
@@ -239,7 +243,7 @@ body {
     -webkit-filter: brightness(.3) grayscale(100%);
     filter: brightness(.3) grayscale(100%);
     opacity: .3 !important;
-    min-height: 415px;
+    min-height: 320px;
 }
 
 .circle {
@@ -381,7 +385,100 @@ a:hover {
     min-height: 100px;
     z-index: 1;
 }
+
 .paddingTopBot {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.relatedImgChamp {
+    background-position: 87.9835% 31.3808%;
+    background-size: 250%;
+    opacity: 1;
+    height: 108px;
+    width: 108px;
+    position: unset;
+    margin-left: 70px;
+}
+
+.mainChamp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-attachment: local;
+    background-color: #0a0a0c;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity .4s ease;
+    width: 100%;
+
+
+}
+
+.fetureVideoHeader {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.videoIcon {
+    max-height: 20px;
+    transition: opacity .2s ease 0s;
+    margin: 8px;
+    text-align: center;
+}
+
+.videoTitle {
+    margin: 0 auto;
+    position: relative;
+}
+
+.sectionName {
+    -webkit-transition: opacity .2s ease .1s;
+    -moz-transition: .2s opacity ease .1s;
+    transition: opacity .2s ease .1s;
+    font-family: Beaufort for LOL, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 3px;
+    position: relative;
+    text-align: center;
+    text-indent: 8px;
+    text-transform: uppercase;
+    color: #c4b998;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+
+}
+
+.lineLeft {
+    transform: rotate(180deg);
+}
+
+.leftLine {
+    text-align: right;
+}
+
+.rightLine {
+    text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+    .imageChamp {
+        margin-left: 270px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .imageChamp {
+        margin-left: 210px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .imageChamp {
+        margin-left: 115px;
+    }
 }
