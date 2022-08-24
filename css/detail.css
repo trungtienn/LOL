@@ -433,6 +433,11 @@ a:hover {
 .videoTitle {
     margin: 0 auto;
     position: relative;
+    font-weight: 500;
+    font-size: 35px;
+    color: #ece0d7;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
 }
 
 .sectionName {
@@ -465,9 +470,72 @@ a:hover {
     text-align: left;
 }
 
+.videoPlaceholder {
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #131315;
+    background-position: 50%;
+    background-size: cover;
+    /* opacity: 1; */
+    transition: opacity .3s ease;
+    z-index: 950;
+    min-height: 85%;
+    min-width: 90%;
+    margin: 35px;
+}
+
+.videoBox {
+    min-height: 460px;
+
+}
+
+.vidDescription {
+    padding-top: 145px;
+}
+
+.playVideo {
+    margin-top: 20px;
+    width: 800px;
+    height: 420px;
+
+}
+
+.playVidButton {
+    width: 88px;
+    height: 88px;
+    opacity: 1;
+    transition: .3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.outerRing1 {
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: .2s;
+}
+
+.outerRing2 {
+    transform: scale(1);
+    fill: #1a1d21;
+    transform-origin: 50% 50%;
+    transition: .2s;
+}
+
 @media only screen and (max-width: 768px) {
     .imageChamp {
         margin-left: 270px;
+    }
+    .playVideo {
+        margin-top: 20px;
+        width: 730px;
+        height: 420px;
+    }
+    .vidDescription {
+        padding-top: 0px;
     }
 }
 
@@ -475,10 +543,26 @@ a:hover {
     .imageChamp {
         margin-left: 210px;
     }
+    .playVideo {
+        margin-top: 20px;
+        width: 560px;
+        height: 420px;
+    }
+    .vidDescription {
+        padding-top: 0px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
     .imageChamp {
         margin-left: 115px;
+    }
+    .playVideo {
+        margin-top: 20px;
+        width: 400px;
+        height: 420px;
+    }
+    .vidDescription {
+        padding-top: 0px;
     }
 }
