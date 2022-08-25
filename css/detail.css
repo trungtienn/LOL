@@ -138,7 +138,7 @@ body {
     max-width: 122px;
 }
 
-.ChampionRace {
+.championRace {
     -webkit-transition: .3s ease;
     -moz-transition: ease .3s;
     transition: .3s ease;
@@ -525,29 +525,76 @@ a:hover {
     transition: .2s;
 }
 
+.shortStoryText {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.6;
+    text-align-last: center;
+    text-transform: none;
+}
+
+.storyBox {
+    margin-bottom: 84px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.champDiscoverImg {
+    /* position: absolute;  */
+    /* top: 0; */
+    right: 0;
+    left: 0;
+    top: -webkit-calc(50% - 70px);
+    top: calc(50% - 70px);
+    /* -webkit-transition: .3s ease; */
+    /* -moz-transition: ease .3s; */
+    transition: .3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    /* max-width: 100px; */
+    /* max-height: 100px; */
+    min-width: 100px;
+    min-height: 100px;
+    z-index: 1;
+    width: 100%;
+    height: 300px;
+}
+
 @media only screen and (max-width: 768px) {
     .imageChamp {
         margin-left: 270px;
     }
+
     .playVideo {
         margin-top: 20px;
         width: 730px;
         height: 420px;
     }
+
     .vidDescription {
         padding-top: 0px;
     }
 }
 
+.galleryImage {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+.showcaseMargin {
+    margin: auto;
+}
 @media only screen and (max-width: 600px) {
     .imageChamp {
         margin-left: 210px;
     }
+
     .playVideo {
         margin-top: 20px;
         width: 560px;
         height: 420px;
     }
+
     .vidDescription {
         padding-top: 0px;
     }
@@ -557,11 +604,13 @@ a:hover {
     .imageChamp {
         margin-left: 115px;
     }
+
     .playVideo {
         margin-top: 20px;
         width: 400px;
         height: 420px;
     }
+
     .vidDescription {
         padding-top: 0px;
     }

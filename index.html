@@ -304,11 +304,14 @@
         localStorage.setItem('champion', 'akali'); // set champion name
         // window.location.href = "file:///Users/tien/Documents/Lập%20trình/LOL/detail.html" // redirec 
 
+
+        // <a href="https://universe.leagueoflegends.com${data.champions[i].url}">
+
         function buildList(data) {
             let list = ''; console.log(data.champions);
             for (var i = 0; i < data.champions.length; i++) {
                 list = list + `<div class="col-12 col-md-3 zoom marginBot">
-                    <a href="https://universe.leagueoflegends.com${data.champions[i].url}">
+                    <a href="detail.html">
                 <img class="charImg" style="object-position:62.5% 27.7778%"
                     src="${data.champions[i].image.uri}">
                 <div class="objectName">
