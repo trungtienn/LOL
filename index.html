@@ -8,26 +8,6 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <style>
-        /* be-vietnam-pro-regular - latin */
-        @font-face {
-            font-family: 'Be Vietnam Pro';
-            font-style: normal;
-            font-weight: 400;
-            src: url('../fonts/be-vietnam-pro-v10-latin-regular.eot');
-            /* IE9 Compat Modes */
-            src: local(''),
-                url('../fonts/be-vietnam-pro-v10-latin-regular.eot?#iefix') format('embedded-opentype'),
-                /* IE6-IE8 */
-                url('../fonts/be-vietnam-pro-v10-latin-regular.woff2') format('woff2'),
-                /* Super Modern Browsers */
-                url('../fonts/be-vietnam-pro-v10-latin-regular.woff') format('woff'),
-                /* Modern Browsers */
-                url('../fonts/be-vietnam-pro-v10-latin-regular.ttf') format('truetype'),
-                /* Safari, Android, iOS */
-                url('../fonts/be-vietnam-pro-v10-latin-regular.svg#BeVietnamPro') format('svg');
-            /* Legacy iOS */
-        }
-
         @media (min-width: 992px) {
             .dropdown-menu .dropdown-toggle:after {
                 border-top: .3em solid transparent;
@@ -84,13 +64,6 @@
             padding: 0 30px;
         }
 
-        /* body {
-            background-image: url("https://universe.leagueoflegends.com/images/championsBackground.jpg");
-            background-size: cover;
-            background-position: top;
-            background-repeat: no-repeat;
-            filter: brightness(.4);
-        } */
 
         .iconHeader {
             height: 32px;
@@ -321,21 +294,17 @@
     <script>
         let globalData = {};
 
-        localStorage.setItem('champion', 'akali'); // set champion name
-        // window.location.href = "file:///Users/tien/Documents/Lập%20trình/LOL/detail.html" // redirec 
 
-
-        // <a href="https://universe.leagueoflegends.com${data.champions[i].url}">
 
         function buildList(data) {
             let list = ''; console.log(data.champions);
             for (var i = 0; i < data.champions.length; i++) {
-                list = list + `<div class="col-12 col-md-3 zoom marginBot">
-                    <a href="detail.html">
+                var championItem = data.champions[i];
+                list = list + `<div class="col-12 col-md-3 zoom marginBot championClick" data-champion-slug="${championItem.slug}">
                 <img class="charImg" style="object-position:62.5% 27.7778%"
-                    src="${data.champions[i].image.uri}">
+                    src="${championItem.image.uri}">
                 <div class="objectName">
-                    <h5>${data.champions[i].title}</h5>
+                    <h5>${championItem.title}</h5>
                 </div>
                 </a>
             </div>`
@@ -351,6 +320,13 @@
                 globalData = data;
                 html = html + buildList(data);
                 document.getElementById("content").innerHTML = html;
+
+                $(".championClick").click(function () {
+                    // var championSlug = $(".championClick").attr("data-champion-slug");
+                    var championSlug = $(this).attr("data-champion-slug");
+                    localStorage.setItem('champion', championSlug); // set champion name
+                    window.location.href = "detail.html" // redirec 
+                });
             });
 
         $("#myInput").on("change paste keyup", function () {
@@ -404,6 +380,8 @@
                 });
             $("#myInput").val(null);
         });
+
+
 
     </script>
 </body>
