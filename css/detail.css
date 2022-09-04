@@ -59,6 +59,8 @@ body {
     background-size: cover;
     transition: opacity .4s ease;
     width: 100%;
+    background-position: 67.4897% 14.6444%; opacity: 1; top: 40px;
+    /* background-image: url('https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltda668b66206f7f9e/60ee0b41cdb93c284ee3e936/Ahri_0.jpg'); */
 }
 
 .titleColor {
@@ -581,6 +583,7 @@ a:hover {
     object-fit: cover;
     height: 300px;
     width: 100%;
+    margin-bottom: 30px
 }
 
 .showcaseMargin {

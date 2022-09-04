@@ -12,311 +12,36 @@
 
 <body>
 
-    <div class="backGroundImg"
-        data-am-url="https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltda668b66206f7f9e/60ee0b41cdb93c284ee3e936/Ahri_0.jpg"
-        style="background-image: url(&quot;https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltda668b66206f7f9e/60ee0b41cdb93c284ee3e936/Ahri_0.jpg&quot;); background-position: 67.4897% 14.6444%; opacity: 1; top: 40px;">
-        <div class="headerPosition">
-            <div class="headerTitle">
-                <span class="ChampTitle titleColor">Ahri</span>
-                <img class="divider" src="https://universe.leagueoflegends.com/images/t1HeaderDivider.png"
-                    alt="Divider">
-                <h3 class="subheadline">Hồ Ly Chín Đuôi</h3>
-            </div>
-        </div>
+    <div class="backGroundImg">
 
+        <div class="headerPosition" id="header"></div>
         <div id="biography"></div>
-
         <div id="featureVideo"></div>
+        <div id="video"></div>
+        <div id="shortStory"></div>
+        <div id="galleryTag"></div>
+        <div id="galleryList"></div>
+        <div id="linkoutTag"></div>
+        <div id="linkoutList"></div>
+        <div id="exploreChamp"></div>
 
-        <div class="fetureVideoHeader">
-            <img class="videoIcon"
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAgCAYAAABQISshAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABXFJREFUeNrMWGtMHUUU3tnHffG+l6eNFVtQDLQlhgZpAtXExw23WGON1RT5QRqjicRajbXRtE2NphWs1Vp+aNsEfKA0kkb/NDXBGFCxsaU2ICVKUYM0lIo8L3DvzhxngYXZZXfvEgr0JJPdnTm7c7455ztzZhHHcSI3LYibE2TQx1n03Syx+jYYdX580J+WfltctRgBALI5IdwEg5GNdzTzfP3htlK3S6ykt3FiBADI5kRoCT0xT97etTklNyu5WuCRn5BpbKpHDAHsLsuLy85MTMcYliycqCFT3x4Jhgffq/mlp7d/hFjp17+7dXu0R6pCHCSoIFSDnSZA0KeHt5TExzjruGUSANQ/Nh6q3Lnv7EejwRCwobSnPD+5IHfV+6KIAkbvinrj2WeCCae0ZZQkj1N458SBR7xPvfrNIbWz5q3ix+JjXEcQAh/BxnS0BBIOY56QZQUyJS4n/8rLZXk1I8GQ/FBBepUkoq0AmHps1nOjmJBmUUB+FogexCwQTGOQdUhP33DxxKQ8ulDDeB6BES9UoXOgFJ9nPV31Y6pdeTmpb0ii4EeI87E2YEy+u9zZ/8Ka1fGb46Kdfr1HDIHIMkZsaDVf7O04fa5zaDE0sEi9baerSo7NGsajHUCjAWb5wwUpb/ZVHGo8OTYehhMHHtaEvVh3OHDNYmIJM6ElY4wWmWot9yVsEsbUC82tHdcrqmov/DnnVaLRF4FAbKQlVCUcIrwSKXZ33YWC0xOZemFiZGxy/66q70/SkAZmU0SKLqsv4gWQWcYEWYQGLBYIawvdu1ovdV5/7uhnrV0GuiATgjQeYeMsFMZfTYbwxenVAORxSwFR4AuYiVCE8ACDEAL7HpmzZWhksoGCuGqySPO2Bo1HRsdDjS9VNdWppD++9/7VbqdYwMRqJI5Y1VCwEI8QIOziIF2yAKznCGbiTJZBk72UMXZ8Jo+jRYYQmAJh5mLu9Z4G1VZWXxNaoOOL3n0AsNgiEazeZefC8qz3wQiQYqtpaOmIjxRys30lRemvBwrvCC3Vjm5li96TBqHFZgqizev0mR13iHzZUpYm7FwzpZEpv/S2idpaCnhtKUG4lai19GFmPA4a20QZwyCFHT9VrEni8wef3RgHU8IhkedzMIYVARJhXlDOIhqyh8NyA90rymee7/G4hDdZbrKHl+UUj0t8/Bl/5refnP29y/jsQhM04xHBG+u6lOJ1b6Eu8CluuFUaldQkr7v0vuyk4Zb2/lZaiWsOWoUb0tbR8j6g6gvt3f/JTkn4MjnBRQmCvKDUX8CFaJukjZKEk5RPrESjZosOUXiwcEPKphRf1E9tVwcGZ8AA7cuRBD6g6ipZIcqgjFdIj3Zvzwl4Y5213C0g1NZgcDy8/0h9+ylaRpG9peufjnJL1ex5BMyqWZqn8UplrbBMzlDuFtGDlVeljdspVL62Y13xHz3DFfqMagZE0eD7BsY74qMcKwLkn/5gdU9/cM/GLF8lBfQoM/RAxqrYFsqZZjZrCcxxd560dQ8ObcpOzKKrkrWcRJdl0vRBQ8fRrt6RYNPlvjO5axOuOCS+kI55ZnQcNP4z2HeEGTDmlR7iGlf53Dn0unZZQGDScr7z3/Lua6NBldg/d9zoiPVIXyTGOdZQAHcZvacQ22Fybte0ncUZ+TEeKR8hiKJHFbt/IO0ePpV9YXxsAl+oPdf9w2QYq6kWdLrw4rasJz2UK/Q+QV+MOUz+pCAb/Qv5rWp20AKDe6srPFF0e0p6WvRxHs39DhLUVGvzHG42qf5erwcR9MAmiKnrb38Nj/7YfqP+3sz4vwUeFdHQcgnMzwRkcyWNjLRjHNgEbTWXpu/8lYFf70yN+pyG2t3/CzAAzeFCiMS50o8AAAAASUVORK5CYII="
-                alt="video Icon">
-            <div class="videoTitle">
-                <h5 class="sectionName row">
-                    <span class="col-6 col-md-5 leftLine">
-                        <img class="lineLeft"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                    <span class="col-12 col-md-2">PHIM NGẮN</span>
-                    <span class="col-6 col-md-5 rightLine">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                </h5>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="detailGrid">
-                <div class="containerSmall championRace row videoBox">
-                    <div class="col-12 col-md-8">
-                        <iframe class="playVideo" src="https://www.youtube.com/embed/2KPSEybv6qo">
-                        </iframe>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="typeDescription vidDescription">
-                            <h5 class="videoTitle">MỘT BÌNH MINH MỚI</h5>
-                            <span>Ngày mới bắt đầu trên mảnh đất trui rèn trong máu và thép. Trận chiến bắt đầu khi bình
-                                minh vừa ló dạng.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="containerSmall championRace storyBox">
-            <div class="row">
-                <div class="col-3"></div>
-                <div class="col-6 typeDescription">
-                    <h6>TRUYỆN NGẮN</h6>
-                    <h1 class="titleColor">NHẬT TRÌNH VASTAYA CỦA EDUARD SANTANGELO</h1>
-                    <div class="quote">
-                        <p class="shortStoryText">
-                            Dị thú mang dòng máu nhân loại? Ma thuật tâm linh từ một chủng tộc cổ xưa? Trong cuộc điều
-                            tra
-                            khiêm nhường này, tôi bắt gặp những câu hỏi lớn lao hơn nhiều... đủ để tạo nên một cuốn biên
-                            niên. Một cuốn sách bán chạy hàng đầu.
-
-                            "Eduard Santangelo, quý ông Piltover, nhà thám hiểm xứ Ionia, đã khám phá ra tộc vastaya kỳ
-                            lạ
-                            giữa vùng hoang dã." Tôi đã nghe thấy tiếng người ta tranh nhau mua ấn bản đầu tiên rồi đó.
-                        </p>
-                    </div>
-                    <a href="https://universe.leagueoflegends.com/vn_VN/story/vastaya-field-journal/">
-                        <button class="champDetailButton zoom">ĐỌC TIỂU SỬ</button>
-                    </a>
-                </div>
-                <div class="col-3"></div>
-            </div>
-        </div>
-
-        <div class="fetureVideoHeader">
-            <img class="videoIcon"
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA/pJREFUeNqklntIFEEcx3du9857ppak2JGkdcT1NDJ6wEWl2MuKswcVlYWUVmJkkL3Qoqso7aERHURUf2QF0dmDIrQyCisqgqILsY4Mooee2Vu92Wn2utO9vZm9vRrYu5nd2fns9/eaAUxvA0xoo42BwvnSho6XZScMHhhfrVKB6UoWAf8JR8KP62juZL2WOwMAk8Tz6CJQCAUKnhHb+JHJ7I6CSds5DmzGQxVCzPvmlvax4B/UgQhW6WnVWzPNqebYM9i0EwK34NfvXVmLNl2+BxSqiRpecyAnx6hXO7Fp44L3urphmb24dl9wMogCGsnHTG6WRbtkpnWvmgNrxPd5nqkvPdyQ88rjhcKYUxi5QInqqtKpFnOiSQigERCi3uhCzAf3m7aVGMoH5iPhRyUB06CyZj7tmLHMoFNX4L5BIob/8u337Pyym7eDES4FRwv191fMGWbMnphSxbGqhaQA6/ZBx9It1x0BaBhYKTRkzsFNtvSkfgZsWjCIBIU8urvL+WB209t2nxTMyQQWoI1NBg2oLLEV4YKwk0dILTgxrGogptXtaVuFoZD0UcJCrBxEOi6cPzIhY0SSk1WBbLnyiP06r3h/Q51YpVg1CES2Iuj2/HFpg8yx1/DALFetunywomD3rXIpTDzmCBFNhNrGJOtSkow1CPJmJAPFdfjBkbPPdkfYMHrUkup1yEfYp6Tl4UWtvR9P3A28L19789wer48JnxiinpX4mBrJNxpbngxP7evSaTmjUCAQjh7p1fG9c7nj5OOnBBgxuDQU85LSyD/etTpjenys9hTu63rzla/aeOj+NppPSXmsoSleM886ICXZNEMFGP2PX/BF5dlnd3/+9vlfLs8fOzOuT0xNwK+NJ2pfzXrp8XZRgMSojiGpdRRmFGo13B7cV4sC59Fjd+vi83XNrcIC+4vGu/AynY3PP+ZfavB8VQIM9oPgEKU78tIz+xg1tZRqVF967JFdeHlxZlpCTd3rz+KTBsW80mchG0SPD3Vadi3E+xjpwu9NW2e3DvHvuZGhYUcgcckk5WI64ulpY9KzFvzXRIFSU0j8XFqrmYK5Q1N5iPrLJX+3j/lJW1BGdcjcMMV9TZoFvN+k1OZretfxhACVAxIV9zTbqEQ9q2JWQ0gH4+C6fuV+S3sUZo7s4wnWfqVYbaKMWtjW0emQgUZSzEjzGBTnDs3SxbAuSqQHdh2+/OAFdwXFfNTUIZnaD14/12LTa/1QPdWxEDmdV5tLfvytXP8F9YM32C0l+Ly0V1yhJO1jZze/pdrVdF5mMRThXpiP2dFpcQDXYuF4YsA7jAlfHL4+4Vx+iA9qlc89HUXn7rQ8lUkbJlqo8PNHgAEA1jr8CfAaM94AAAAASUVORK5CYII="
-                alt="video Icon">
-            <div class="videoTitle">
-                <h5 class="sectionName row">
-                    <span class="col-6 col-md-5 leftLine">
-                        <img class="lineLeft"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                    <span class="col-12 col-md-2">PHÒNG TRANH</span>
-                    <span class="col-6 col-md-5 rightLine">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                </h5>
-            </div>
-        </div>
-
-        <div class="detailGrid">
-            <div class="containerSmall row">
-                <div class="col-6  zoom">
-                    <img class="galleryImage"
-                        src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta59a131d5e15fb04/60ee0b32c941f329772e4d6f/ahri_full_color_render.jpg"
-                        alt="">
-                </div>
-                <div class="col-3  zoom">
-                    <img class="galleryImage"
-                        src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltb46abd27e404e0eb/60ee0b3d418ee7283c2e764e/ahri_mockup.jpg"
-                        alt="">
-                </div>
-                <div class="col-3  zoom">
-                    <img class="galleryImage"
-                        src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt01b215bb0cb91780/60ee0b2fe29e9e21c2a096dc/ahri_concept.jpg"
-                        alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="fetureVideoHeader">
-            <img class="videoIcon"
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAbCAYAAAD77kbeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAx5JREFUeNrMV11IVEEUvnPvrLt3XcMVtzWsRBF/KOxBkq2HAsEI+o8iSaWgHoR6qLcgfInqodCXIgIti+pBIsiHKHzqISLDEKkk/EkIe4kQKl1/7s6czt0/V5177+yukQPDzLl3fr4558x3zpC+zhMPVJWcUtZI4RweUlCgiXFQ1lBpogvzkQ5NU8+iQP8nEkIUAFAYY7yLoOxJfI9XxaZVLGRRARsZBG2yr4pA22xMJAGJxhKHPZJ9VWIzkoZ2nMARJ0BmnzoAcFogHROSFNm2T+9f2dPszqHNKKlgtyEAycKLQUKd5hg2b7DH1O3SbuOG7n9KCgDSKs2h6g5qGOwDkufONUSeA6QhtDm/vm5jBR5G45xHTcT4UjNytmg6HEec+Eb0XdVWmlBT8fqrKsT6BHAuez3wfcTcQE+5FUTiOou+QRp8ZclPiUodFiOCvgwQu/9gQ6YxDWJ1WWhqtZh8yb+2M9u3HdpdenxTwPd1cOTnjGhQuvEObIA5aq62KuAu9Ltf4gK+reV+83I1iubTa611B3WdmkHQl8FlmQvPRi5dvvu+WwZoaMv6IGfcF78wJVbjqYuSxsTADIoH57dg2y1rPswCllPXivF0Jmw8Qk2FsO/NAJQRnjW6JJxaiVENVwSgVjh9InXJ1smFoE42lAUC+fqGhOz1uIrycumz6ASujE39nm+Jcpga5TAYGp8a7eufDKeCWo0AnAR4/mh1ZbBAfxPnQdmJwx09n2upxa1azlFWxGnpP143rUJT6WkeqHpXTdCrxbmKrJKWkoeaM/hEaVFuAb4BwhzgW7z+wFMUm3kv1mkMa/0p/yYWIrz93ovRd+Tc4cqadbn0Ku6eb6NWK3B/fk0bN+/0jvTLID29t6ykuNA7HHf0j9effKpbZp0YJfg8Whs63YFMU5c8nRZgUy9Bnua9QkoAuzw92tII40MYoY9lmmrg82zIIp4JHBEATaY4PCAU2v70y43W/eWvEJg/mqakkWHi+jPP304OOrxcFkktwmYTPGWKVkGZpATkbJ1bir8uHKnowbxpH1ro4q3esU4RsL8CDACAA07xZ8xkjQAAAABJRU5ErkJggg=="
-                alt="video Icon">
-            <div class="videoTitle">
-                <h5 class="sectionName row">
-                    <span class="col-6 col-md-5 leftLine">
-                        <img class="lineLeft"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                    <span class="col-12 col-md-2">FAN ART SHOWCASE</span>
-                    <span class="col-6 col-md-5 rightLine">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                </h5>
-            </div>
-        </div>
-
-        <div class="container_fluid">
-            <div class="detailGrid">
-                <div class="containerSmall championRace storyBox zoom"
-                    style="
-                background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4834c0f0eb4ceb69/60ee0b30fde37d4c039e4389/ahri-polycount.jpg);;
-                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4834c0f0eb4ceb69/60ee0b30fde37d4c039e4389/ahri-polycount.jpg');;">
-
-                    <div class="typeDescription showcaseMargin">
-                        <h1 class="titleColor">AHRI FAN ART SHOWCASE</h1>
-                        <div class="quote">
-                            <p class="shortStoryText">
-                                Inspired by Ahri. Created by you.
-                            </p>
-                        </div>
-                        <a href="">
-                            <button class="champDetailButton zoom">XEM THỬ</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="fetureVideoHeader">
-            <img class="videoIcon"
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAbCAYAAAD77kbeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAx5JREFUeNrMV11IVEEUvnPvrLt3XcMVtzWsRBF/KOxBkq2HAsEI+o8iSaWgHoR6qLcgfInqodCXIgIti+pBIsiHKHzqISLDEKkk/EkIe4kQKl1/7s6czt0/V5177+yukQPDzLl3fr4558x3zpC+zhMPVJWcUtZI4RweUlCgiXFQ1lBpogvzkQ5NU8+iQP8nEkIUAFAYY7yLoOxJfI9XxaZVLGRRARsZBG2yr4pA22xMJAGJxhKHPZJ9VWIzkoZ2nMARJ0BmnzoAcFogHROSFNm2T+9f2dPszqHNKKlgtyEAycKLQUKd5hg2b7DH1O3SbuOG7n9KCgDSKs2h6g5qGOwDkufONUSeA6QhtDm/vm5jBR5G45xHTcT4UjNytmg6HEec+Eb0XdVWmlBT8fqrKsT6BHAuez3wfcTcQE+5FUTiOou+QRp8ZclPiUodFiOCvgwQu/9gQ6YxDWJ1WWhqtZh8yb+2M9u3HdpdenxTwPd1cOTnjGhQuvEObIA5aq62KuAu9Ltf4gK+reV+83I1iubTa611B3WdmkHQl8FlmQvPRi5dvvu+WwZoaMv6IGfcF78wJVbjqYuSxsTADIoH57dg2y1rPswCllPXivF0Jmw8Qk2FsO/NAJQRnjW6JJxaiVENVwSgVjh9InXJ1smFoE42lAUC+fqGhOz1uIrycumz6ASujE39nm+Jcpga5TAYGp8a7eufDKeCWo0AnAR4/mh1ZbBAfxPnQdmJwx09n2upxa1azlFWxGnpP143rUJT6WkeqHpXTdCrxbmKrJKWkoeaM/hEaVFuAb4BwhzgW7z+wFMUm3kv1mkMa/0p/yYWIrz93ovRd+Tc4cqadbn0Ku6eb6NWK3B/fk0bN+/0jvTLID29t6ykuNA7HHf0j9effKpbZp0YJfg8Whs63YFMU5c8nRZgUy9Bnua9QkoAuzw92tII40MYoY9lmmrg82zIIp4JHBEATaY4PCAU2v70y43W/eWvEJg/mqakkWHi+jPP304OOrxcFkktwmYTPGWKVkGZpATkbJ1bir8uHKnowbxpH1ro4q3esU4RsL8CDACAA07xZ8xkjQAAAABJRU5ErkJggg=="
-                alt="video Icon">
-            <div class="videoTitle">
-                <h5 class="sectionName row">
-                    <span class="col-6 col-md-5 leftLine">
-                        <img class="lineLeft"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                    <span class="col-12 col-md-2">LIÊN KẾT TIÊU BIỂU</span>
-                    <span class="col-6 col-md-5 rightLine">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                </h5>
-            </div>
-        </div>
-
-        <div class="container_fluid">
-            <div class="detailGrid">
-                <div class="containerSmall championRace storyBox zoom"
-                    style="
-                background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/blte950c7b941a5b9e3/60ee0b2b4be40c60fcda6c7c/ahri_artbook.jpg);
-                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images.contentstack.io/v3/assets/blt187521ff0727be24/blte950c7b941a5b9e3/60ee0b2b4be40c60fcda6c7c/ahri_artbook.jpg');;">
-
-                    <div class="typeDescription showcaseMargin">
-                        <h1 class="titleColor">SÁCH TRANH LIÊN MINH HUYỀN THOẠI</h1>
-                        <div class="quote">
-                            <p class="shortStoryText">
-                                Ahri pada asalnya berasal daripada karakter mitos Korea bernama Kumiho: serigala berekor
-                                sembilan yang boleh bertukar menjadi seorang wanita yang cantik dan menggoda lelaki
-                                dengan hasrat untuk membunuh mereka. Beberapa champion yang paling disayangi di League
-                                diinspirasikan daripada budaya mitos, dan untuk sebab yang baik - mitos dibentuk
-                                daripada kisah, tradisi, dan tema yang bertahan selama berkurun-kurun lamanya, yang
-                                mencapai fantasi dan ketakutan para manusia. Champion seperti Ahri adalah pola asas yang
-                                kami ubah untuk menjadikannya unik kepada League of Legends.
-                            </p>
-                        </div>
-                        <a href="">
-                            <button class="champDetailButton zoom">XEM THỬ</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="fetureVideoHeader">
-            <img class="videoIcon"
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAgCAYAAABQISshAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABXFJREFUeNrMWGtMHUUU3tnHffG+l6eNFVtQDLQlhgZpAtXExw23WGON1RT5QRqjicRajbXRtE2NphWs1Vp+aNsEfKA0kkb/NDXBGFCxsaU2ICVKUYM0lIo8L3DvzhxngYXZZXfvEgr0JJPdnTm7c7455ztzZhHHcSI3LYibE2TQx1n03Syx+jYYdX580J+WfltctRgBALI5IdwEg5GNdzTzfP3htlK3S6ykt3FiBADI5kRoCT0xT97etTklNyu5WuCRn5BpbKpHDAHsLsuLy85MTMcYliycqCFT3x4Jhgffq/mlp7d/hFjp17+7dXu0R6pCHCSoIFSDnSZA0KeHt5TExzjruGUSANQ/Nh6q3Lnv7EejwRCwobSnPD+5IHfV+6KIAkbvinrj2WeCCae0ZZQkj1N458SBR7xPvfrNIbWz5q3ix+JjXEcQAh/BxnS0BBIOY56QZQUyJS4n/8rLZXk1I8GQ/FBBepUkoq0AmHps1nOjmJBmUUB+FogexCwQTGOQdUhP33DxxKQ8ulDDeB6BES9UoXOgFJ9nPV31Y6pdeTmpb0ii4EeI87E2YEy+u9zZ/8Ka1fGb46Kdfr1HDIHIMkZsaDVf7O04fa5zaDE0sEi9baerSo7NGsajHUCjAWb5wwUpb/ZVHGo8OTYehhMHHtaEvVh3OHDNYmIJM6ElY4wWmWot9yVsEsbUC82tHdcrqmov/DnnVaLRF4FAbKQlVCUcIrwSKXZ33YWC0xOZemFiZGxy/66q70/SkAZmU0SKLqsv4gWQWcYEWYQGLBYIawvdu1ovdV5/7uhnrV0GuiATgjQeYeMsFMZfTYbwxenVAORxSwFR4AuYiVCE8ACDEAL7HpmzZWhksoGCuGqySPO2Bo1HRsdDjS9VNdWppD++9/7VbqdYwMRqJI5Y1VCwEI8QIOziIF2yAKznCGbiTJZBk72UMXZ8Jo+jRYYQmAJh5mLu9Z4G1VZWXxNaoOOL3n0AsNgiEazeZefC8qz3wQiQYqtpaOmIjxRys30lRemvBwrvCC3Vjm5li96TBqHFZgqizev0mR13iHzZUpYm7FwzpZEpv/S2idpaCnhtKUG4lai19GFmPA4a20QZwyCFHT9VrEni8wef3RgHU8IhkedzMIYVARJhXlDOIhqyh8NyA90rymee7/G4hDdZbrKHl+UUj0t8/Bl/5refnP29y/jsQhM04xHBG+u6lOJ1b6Eu8CluuFUaldQkr7v0vuyk4Zb2/lZaiWsOWoUb0tbR8j6g6gvt3f/JTkn4MjnBRQmCvKDUX8CFaJukjZKEk5RPrESjZosOUXiwcEPKphRf1E9tVwcGZ8AA7cuRBD6g6ipZIcqgjFdIj3Zvzwl4Y5213C0g1NZgcDy8/0h9+ylaRpG9peufjnJL1ex5BMyqWZqn8UplrbBMzlDuFtGDlVeljdspVL62Y13xHz3DFfqMagZE0eD7BsY74qMcKwLkn/5gdU9/cM/GLF8lBfQoM/RAxqrYFsqZZjZrCcxxd560dQ8ObcpOzKKrkrWcRJdl0vRBQ8fRrt6RYNPlvjO5axOuOCS+kI55ZnQcNP4z2HeEGTDmlR7iGlf53Dn0unZZQGDScr7z3/Lua6NBldg/d9zoiPVIXyTGOdZQAHcZvacQ22Fybte0ncUZ+TEeKR8hiKJHFbt/IO0ePpV9YXxsAl+oPdf9w2QYq6kWdLrw4rasJz2UK/Q+QV+MOUz+pCAb/Qv5rWp20AKDe6srPFF0e0p6WvRxHs39DhLUVGvzHG42qf5erwcR9MAmiKnrb38Nj/7YfqP+3sz4vwUeFdHQcgnMzwRkcyWNjLRjHNgEbTWXpu/8lYFf70yN+pyG2t3/CzAAzeFCiMS50o8AAAAASUVORK5CYII="
-                alt="video Icon">
-            <div class="videoTitle">
-                <h5 class="sectionName row">
-                    <span class="col-6 col-md-5 leftLine">
-                        <img class="lineLeft"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                    <span class="col-12 col-md-2">HẬU TRƯỜNG PHIM NGẮN</span>
-                    <span class="col-6 col-md-5 rightLine">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                </h5>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="detailGrid">
-                <div class="containerSmall championRace row videoBox">
-                    <div class="col-12 col-md-8">
-                        <iframe class="playVideo" src="https://www.youtube.com/embed/R5fyIBdTb2o">
-                        </iframe>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="typeDescription vidDescription">
-                            <h5 class="videoTitle">HẬU TRƯỜNG PHIM NGẮN MỘT BÌNH MINH MỚI</h5>
-                            <span>Xem đoạn phim hậu trường để biết chúng tôi đã làm gì với thiết kế nhân vật, âm nhạc,
-                                hoạt cảnh để tạo nên trận chiến giữa các vị tướng yêu thích của bạn nhé.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="fetureVideoHeader">
-            <img class="videoIcon"
-                src="https://universe.leagueoflegends.com/esimages/content_type_icon_universe__14mjH.png"
-                alt="video Icon">
-            <div class="videoTitle">
-                <h5 class="sectionName row">
-                    <span class="col-6 col-md-5 leftLine">
-                        <img class="lineLeft"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                    <span class="col-12 col-md-2">KHÁM PHÁ TƯỚNG</span>
-                    <span class="col-6 col-md-5 rightLine">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
-                    </span>
-                </h5>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="detailGrid">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-
-                        <div class="championRace margin zoom">
-                            <a href="https://lienminh.garena.vn/game-info/champions?view=champion&id=103">
-                                <img class="champDiscoverImg"
-                                    src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta877c35110144de9/60ee0b25b9fc8939338c07ae/aatrox-splash.jpg">
-                                <div class="championRace">
-                                    <div class="typeDescription paddingTopBot">
-                                        <h6>AATROX</h6>
-                                        <span>RUNETERRA</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="col-12 col-md-6">
-
-                        <div class="championRace margin zoom">
-                            <a href="https://lienminh.garena.vn/game-info/champions?view=champion&id=103">
-                                <img class="champDiscoverImg"
-                                    src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltadda3687d160dca6/60ee0b4666d52e63b8eb6b2f/Classic_Akali_Splash.jpg">
-                                <div class="championRace">
-                                    <div class="typeDescription paddingTopBot">
-                                        <h6>AKALI</h6>
-                                        <span>RUNETERRA</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    </div>
 
 </body>
 <script>
+
+    
+
+    function buildHeaderHtml(data) {
+        return `<div class="headerTitle">
+                <span class="ChampTitle titleColor">${data.champion.name}</span>
+                <img class="divider" src="https://universe.leagueoflegends.com/images/t1HeaderDivider.png"
+                    alt="Divider">
+                <h3 class="subheadline">${data.champion.title}</h3>
+            </div>`;
+    }
+
+    
 
 
     function buildBioMainHtml(data) {
@@ -372,35 +97,6 @@
         }
         relatedChamp = relatedChamp + `</div></div>`;
         return relatedChamp;
-        // return `<div class="championRace margin">
-        //                     <div class="race">
-        //                         <h6 class="relatedText">TƯỚNG LIÊN QUAN</h6>
-        //                         <div>
-        //                             <div class="imageChamp circle relatedImgChamp"
-        //                                 data-am-url="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt41c476486b063ef8/60ee13df31f9ee2ab08a4dfe/Yasuo_0.jpg"
-        //                                 style="background-image: url(&quot;https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt41c476486b063ef8/60ee13df31f9ee2ab08a4dfe/Yasuo_0.jpg&quot;);">
-        //                             </div>
-        //                             <h6 class="relatedText">YASUO</h6>
-        //                         </div>
-        //                         <div>
-        //                             <div class="imageChamp circle relatedImgChamp"
-        //                                 data-am-url="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2560838ced20b5d5/60ee0f2925b09b4bfcbdf557/lillia-splash.jpg"
-        //                                 style="background-image: url(&quot;https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2560838ced20b5d5/60ee0f2925b09b4bfcbdf557/lillia-splash.jpg&quot;); ">
-        //                             </div>
-        //                             <h6 class="relatedText">LILLIA</h6>
-        //                         </div>
-        //                         <div>
-        //                             <div class="imageChamp circle relatedImgChamp"
-        //                                 data-am-url="https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltac6dc4d0af9fd20e/60ee0f77c019ad2aaa39a506/MonkeyKing_0.jpg"
-        //                                 style="background-image: url(&quot;https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltac6dc4d0af9fd20e/60ee0f77c019ad2aaa39a506/MonkeyKing_0.jpg&quot;);">
-        //                             </div>
-        //                             <h6 class="relatedText">NGỘ KHÔNG</h6>
-        //                         </div>
-
-
-        //                     </div>
-
-        //                 </div>`;
     }
 
     function buildBioRole(data) {
@@ -498,17 +194,279 @@
 
     }
 
+    function buildFeatureVideoTag(data) {
+        return `<div class="fetureVideoHeader">
+            <img class="videoIcon"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAgCAYAAABQISshAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABXFJREFUeNrMWGtMHUUU3tnHffG+l6eNFVtQDLQlhgZpAtXExw23WGON1RT5QRqjicRajbXRtE2NphWs1Vp+aNsEfKA0kkb/NDXBGFCxsaU2ICVKUYM0lIo8L3DvzhxngYXZZXfvEgr0JJPdnTm7c7455ztzZhHHcSI3LYibE2TQx1n03Syx+jYYdX580J+WfltctRgBALI5IdwEg5GNdzTzfP3htlK3S6ykt3FiBADI5kRoCT0xT97etTklNyu5WuCRn5BpbKpHDAHsLsuLy85MTMcYliycqCFT3x4Jhgffq/mlp7d/hFjp17+7dXu0R6pCHCSoIFSDnSZA0KeHt5TExzjruGUSANQ/Nh6q3Lnv7EejwRCwobSnPD+5IHfV+6KIAkbvinrj2WeCCae0ZZQkj1N458SBR7xPvfrNIbWz5q3ix+JjXEcQAh/BxnS0BBIOY56QZQUyJS4n/8rLZXk1I8GQ/FBBepUkoq0AmHps1nOjmJBmUUB+FogexCwQTGOQdUhP33DxxKQ8ulDDeB6BES9UoXOgFJ9nPV31Y6pdeTmpb0ii4EeI87E2YEy+u9zZ/8Ka1fGb46Kdfr1HDIHIMkZsaDVf7O04fa5zaDE0sEi9baerSo7NGsajHUCjAWb5wwUpb/ZVHGo8OTYehhMHHtaEvVh3OHDNYmIJM6ElY4wWmWot9yVsEsbUC82tHdcrqmov/DnnVaLRF4FAbKQlVCUcIrwSKXZ33YWC0xOZemFiZGxy/66q70/SkAZmU0SKLqsv4gWQWcYEWYQGLBYIawvdu1ovdV5/7uhnrV0GuiATgjQeYeMsFMZfTYbwxenVAORxSwFR4AuYiVCE8ACDEAL7HpmzZWhksoGCuGqySPO2Bo1HRsdDjS9VNdWppD++9/7VbqdYwMRqJI5Y1VCwEI8QIOziIF2yAKznCGbiTJZBk72UMXZ8Jo+jRYYQmAJh5mLu9Z4G1VZWXxNaoOOL3n0AsNgiEazeZefC8qz3wQiQYqtpaOmIjxRys30lRemvBwrvCC3Vjm5li96TBqHFZgqizev0mR13iHzZUpYm7FwzpZEpv/S2idpaCnhtKUG4lai19GFmPA4a20QZwyCFHT9VrEni8wef3RgHU8IhkedzMIYVARJhXlDOIhqyh8NyA90rymee7/G4hDdZbrKHl+UUj0t8/Bl/5refnP29y/jsQhM04xHBG+u6lOJ1b6Eu8CluuFUaldQkr7v0vuyk4Zb2/lZaiWsOWoUb0tbR8j6g6gvt3f/JTkn4MjnBRQmCvKDUX8CFaJukjZKEk5RPrESjZosOUXiwcEPKphRf1E9tVwcGZ8AA7cuRBD6g6ipZIcqgjFdIj3Zvzwl4Y5213C0g1NZgcDy8/0h9+ylaRpG9peufjnJL1ex5BMyqWZqn8UplrbBMzlDuFtGDlVeljdspVL62Y13xHz3DFfqMagZE0eD7BsY74qMcKwLkn/5gdU9/cM/GLF8lBfQoM/RAxqrYFsqZZjZrCcxxd560dQ8ObcpOzKKrkrWcRJdl0vRBQ8fRrt6RYNPlvjO5axOuOCS+kI55ZnQcNP4z2HeEGTDmlR7iGlf53Dn0unZZQGDScr7z3/Lua6NBldg/d9zoiPVIXyTGOdZQAHcZvacQ22Fybte0ncUZ+TEeKR8hiKJHFbt/IO0ePpV9YXxsAl+oPdf9w2QYq6kWdLrw4rasJz2UK/Q+QV+MOUz+pCAb/Qv5rWp20AKDe6srPFF0e0p6WvRxHs39DhLUVGvzHG42qf5erwcR9MAmiKnrb38Nj/7YfqP+3sz4vwUeFdHQcgnMzwRkcyWNjLRjHNgEbTWXpu/8lYFf70yN+pyG2t3/CzAAzeFCiMS50o8AAAAASUVORK5CYII="
+                alt="video Icon">
+            <div class="videoTitle">
+                <h5 class="sectionName row">
+                    <span class="col-6 col-md-5 leftLine">
+                        <img class="lineLeft"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
+                    </span>
+                    <span class="col-12 col-md-2">PHIM NGẮN</span>
+                    <span class="col-6 col-md-5 rightLine">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
+                    </span>
+                </h5>
+            </div>
+        </div> `;
+    }
+
+    function buildShortVideoList(data) {
+        let html = ``;
+        for (let i = 0; i < data.modules.length; i++) {
+            if (data.modules[i].type == 'featured-video') {
+                const params = new URL(data.modules[i].uri).searchParams;
+                let urlId = params.get('v');
+
+                if (!urlId) {
+                    const myArray = data.modules[i].uri.split("/");
+                    urlId = myArray.pop();
+                }
+
+                console.log(22222)
+                console.log(urlId)
+
+                html = html + `<div class="container-fluid">
+            <div class="detailGrid">
+                <div class="containerSmall championRace row videoBox">
+                    <div class="col-12 col-md-8">
+                        <iframe class="playVideo" src="https://www.youtube.com/embed/${urlId}">
+                        </iframe>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="typeDescription vidDescription">
+                            <h5 class="videoTitle">${data.modules[i].title}</h5>
+                            <span>${data.modules[i].description}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+
+
+            }
+
+        }
+        return html;
+    }
+
+    function buildGalleryTagHtml(data) {
+        return `<div class="fetureVideoHeader">
+            <img class="videoIcon"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA/pJREFUeNqklntIFEEcx3du9857ppak2JGkdcT1NDJ6wEWl2MuKswcVlYWUVmJkkL3Qoqso7aERHURUf2QF0dmDIrQyCisqgqILsY4Mooee2Vu92Wn2utO9vZm9vRrYu5nd2fns9/eaAUxvA0xoo42BwvnSho6XZScMHhhfrVKB6UoWAf8JR8KP62juZL2WOwMAk8Tz6CJQCAUKnhHb+JHJ7I6CSds5DmzGQxVCzPvmlvax4B/UgQhW6WnVWzPNqebYM9i0EwK34NfvXVmLNl2+BxSqiRpecyAnx6hXO7Fp44L3urphmb24dl9wMogCGsnHTG6WRbtkpnWvmgNrxPd5nqkvPdyQ88rjhcKYUxi5QInqqtKpFnOiSQigERCi3uhCzAf3m7aVGMoH5iPhRyUB06CyZj7tmLHMoFNX4L5BIob/8u337Pyym7eDES4FRwv191fMGWbMnphSxbGqhaQA6/ZBx9It1x0BaBhYKTRkzsFNtvSkfgZsWjCIBIU8urvL+WB209t2nxTMyQQWoI1NBg2oLLEV4YKwk0dILTgxrGogptXtaVuFoZD0UcJCrBxEOi6cPzIhY0SSk1WBbLnyiP06r3h/Q51YpVg1CES2Iuj2/HFpg8yx1/DALFetunywomD3rXIpTDzmCBFNhNrGJOtSkow1CPJmJAPFdfjBkbPPdkfYMHrUkup1yEfYp6Tl4UWtvR9P3A28L19789wer48JnxiinpX4mBrJNxpbngxP7evSaTmjUCAQjh7p1fG9c7nj5OOnBBgxuDQU85LSyD/etTpjenys9hTu63rzla/aeOj+NppPSXmsoSleM886ICXZNEMFGP2PX/BF5dlnd3/+9vlfLs8fOzOuT0xNwK+NJ2pfzXrp8XZRgMSojiGpdRRmFGo13B7cV4sC59Fjd+vi83XNrcIC+4vGu/AynY3PP+ZfavB8VQIM9oPgEKU78tIz+xg1tZRqVF967JFdeHlxZlpCTd3rz+KTBsW80mchG0SPD3Vadi3E+xjpwu9NW2e3DvHvuZGhYUcgcckk5WI64ulpY9KzFvzXRIFSU0j8XFqrmYK5Q1N5iPrLJX+3j/lJW1BGdcjcMMV9TZoFvN+k1OZretfxhACVAxIV9zTbqEQ9q2JWQ0gH4+C6fuV+S3sUZo7s4wnWfqVYbaKMWtjW0emQgUZSzEjzGBTnDs3SxbAuSqQHdh2+/OAFdwXFfNTUIZnaD14/12LTa/1QPdWxEDmdV5tLfvytXP8F9YM32C0l+Ly0V1yhJO1jZze/pdrVdF5mMRThXpiP2dFpcQDXYuF4YsA7jAlfHL4+4Vx+iA9qlc89HUXn7rQ8lUkbJlqo8PNHgAEA1jr8CfAaM94AAAAASUVORK5CYII="
+                alt="video Icon">
+            <div class="videoTitle">
+                <h5 class="sectionName row">
+                    <span class="col-6 col-md-5 leftLine">
+                        <img class="lineLeft"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
+                    </span>
+                    <span class="col-12 col-md-2">PHÒNG TRANH</span>
+                    <span class="col-6 col-md-5 rightLine">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
+                    </span>
+                </h5>
+            </div>
+        </div>`;
+    }
+
+    function buildGalleryListHtml(data) {
+        let html = `<div class="detailGrid">
+            <div class="containerSmall row">`;
+
+        for (let i = 0; i < data.modules.length; i++) {
+            if (data.modules[i].type == 'image-gallery') {
+                for (let a = 0; a < data.modules[i].assets.length; a++) {
+                    html = html + `<div class="col-4 zoom">
+                    <img class="galleryImage"
+                        src="${data.modules[i].assets[a].uri}">
+                </div>`;
+                }
+            }
+
+        }
+
+        html = html + `</div></div>`;
+        return html;
+    }
+
+    function buildLinkoutTag(data) {
+        return `<div class="fetureVideoHeader">
+            <img class="videoIcon"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAbCAYAAAD77kbeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAx5JREFUeNrMV11IVEEUvnPvrLt3XcMVtzWsRBF/KOxBkq2HAsEI+o8iSaWgHoR6qLcgfInqodCXIgIti+pBIsiHKHzqISLDEKkk/EkIe4kQKl1/7s6czt0/V5177+yukQPDzLl3fr4558x3zpC+zhMPVJWcUtZI4RweUlCgiXFQ1lBpogvzkQ5NU8+iQP8nEkIUAFAYY7yLoOxJfI9XxaZVLGRRARsZBG2yr4pA22xMJAGJxhKHPZJ9VWIzkoZ2nMARJ0BmnzoAcFogHROSFNm2T+9f2dPszqHNKKlgtyEAycKLQUKd5hg2b7DH1O3SbuOG7n9KCgDSKs2h6g5qGOwDkufONUSeA6QhtDm/vm5jBR5G45xHTcT4UjNytmg6HEec+Eb0XdVWmlBT8fqrKsT6BHAuez3wfcTcQE+5FUTiOou+QRp8ZclPiUodFiOCvgwQu/9gQ6YxDWJ1WWhqtZh8yb+2M9u3HdpdenxTwPd1cOTnjGhQuvEObIA5aq62KuAu9Ltf4gK+reV+83I1iubTa611B3WdmkHQl8FlmQvPRi5dvvu+WwZoaMv6IGfcF78wJVbjqYuSxsTADIoH57dg2y1rPswCllPXivF0Jmw8Qk2FsO/NAJQRnjW6JJxaiVENVwSgVjh9InXJ1smFoE42lAUC+fqGhOz1uIrycumz6ASujE39nm+Jcpga5TAYGp8a7eufDKeCWo0AnAR4/mh1ZbBAfxPnQdmJwx09n2upxa1azlFWxGnpP143rUJT6WkeqHpXTdCrxbmKrJKWkoeaM/hEaVFuAb4BwhzgW7z+wFMUm3kv1mkMa/0p/yYWIrz93ovRd+Tc4cqadbn0Ku6eb6NWK3B/fk0bN+/0jvTLID29t6ykuNA7HHf0j9effKpbZp0YJfg8Whs63YFMU5c8nRZgUy9Bnua9QkoAuzw92tII40MYoY9lmmrg82zIIp4JHBEATaY4PCAU2v70y43W/eWvEJg/mqakkWHi+jPP304OOrxcFkktwmYTPGWKVkGZpATkbJ1bir8uHKnowbxpH1ro4q3esU4RsL8CDACAA07xZ8xkjQAAAABJRU5ErkJggg=="
+                alt="video Icon">
+            <div class="videoTitle">
+                <h5 class="sectionName row">
+                    <span class="col-6 col-md-5 leftLine">
+                        <img class="lineLeft"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
+                    </span>
+                    <span class="col-12 col-md-2">LIÊN KẾT TIÊU BIỂU</span>
+                    <span class="col-6 col-md-5 rightLine">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
+                    </span>
+                </h5>
+            </div>
+        </div>`;
+    }
+
+    function buildLinkoutList(data) {
+
+        let html = ``;
+
+        for (let i = 0; i < data.modules.length; i++) {
+            if (data.modules[i].type == 'link-out') {
+                html = html + `<div class="container_fluid">
+            <div class="detailGrid">
+                <div class="containerSmall championRace storyBox zoom"
+                    style="
+                background-image: url(${data.modules[i].background.uri});;
+                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${data.modules[i].background.uri}');;">
+
+                    <div class="typeDescription showcaseMargin">
+                        <h1 class="titleColor">${data.modules[i].title}</h1>
+                        <div class="quote">
+                            <p class="shortStoryText">
+                                ${data.modules[i].title.description}
+                            </p>
+                        </div>
+                        <a href="">
+                            <button class="champDetailButton zoom">XEM THỬ</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+            }
+
+        }
+        return html;
+    }
+
+    function buildShortStoryList(data) {
+        let html = ``;
+        for (let i = 0; i < data.modules.length; i++) {
+            if (data.modules[i].type == 'story-preview') {
+                html = html + `<div class=" championRace storyBox"
+            style="
+                background-image: url(${data.modules[i].background.uri});
+                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${data.modules[i].background.uri}');;">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6 typeDescription">
+                    <h6>TRUYỆN NGẮN</h6>
+                    <h1 class="titleColor">${data.modules[i].title}</h1>
+                    <div class="quote">
+                        <p class="shortStoryText">
+                            ${data.modules[i].description}
+                        </p>
+                    </div>
+                    <a href="https://universe.leagueoflegends.com${data.modules[i].url}">
+                        <button class="champDetailButton zoom">ĐỌC TIỂU SỬ</button>
+                    </a>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>`;
+            }
+
+        }
+        return html;
+    }
+
+    function buildRelatedChamp(data) {
+        let html = `<div class="fetureVideoHeader">
+            <img class="videoIcon"
+                src="https://universe.leagueoflegends.com/esimages/content_type_icon_universe__14mjH.png"
+                alt="video Icon">
+            <div class="videoTitle">
+                <h5 class="sectionName row">
+                    <span class="col-6 col-md-5 leftLine">
+                        <img class="lineLeft"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
+                    </span>
+                    <span class="col-12 col-md-2">KHÁM PHÁ TƯỚNG</span>
+                    <span class="col-6 col-md-5 rightLine">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAABCAYAAAD0K+rmAAAA80lEQVR4AV2TiW0EMQwDh72loqSTFGwF8A0Exnu/xW/pc35/vr5DmBlIBvyRwP3I3BnctfC5XAMy5LOQC8ZBcZO7UNwBQUQr/cUHNNVMDYaLxhHwZpvmiJqE9l3pJOKfmYQX2zmTUPerj5jtBRKVBBl0dNjf97Hft99jl29vynHucPUGzN55txnS3U3XHHH/feh96WzH5CcJi1c0Jf70OJj3s65mwfXzc/s527ncxnbWaNkz+6p9XE5zJYoB7HQ3IHbQRa/2q9P59Nl7qrfmbzf9HwI0Kq6Dx9f55hS0fejkedg+BSjs+XvP5NM/67k4ATr/AU/oIFuGMAGgAAAAAElFTkSuQmCC">
+                    </span>
+                </h5>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="detailGrid">
+                <div class="row">`;
+        for (let i = 0; i < data['explore-champions'].length; i++) {
+            html = html + `<div class="col-12 col-md-6">
+<div class="championRace margin zoom">
+    <a href="https://universe.leagueoflegends.com/vn_VN/champion/${data['explore-champions'][i].slug}/">
+        <img class="champDiscoverImg"
+            src="${data['explore-champions'][i].image.uri}">
+        <div class="championRace">
+            <div class="typeDescription paddingTopBot">
+                <h6>${data['explore-champions'][i].name}</h6>
+                <span>${data['explore-champions'][i]['associated-faction-slug']}</span>
+            </div>
+        </div>
+    </a>
+</div>
+
+</div>`;
+
+        }
+        html = html + `</div></div></div>`;
+        return html;
+    }
+
     var championSlug = localStorage.getItem('champion');
     const endpoint = `https://universe-meeps.leagueoflegends.com/v1/vn_vn/champions/${championSlug}/index.json`
     fetch(endpoint)
         .then((response) => response.json())
         .then((data) => {
-            // let html = ''; console.log(data);
-            // globalData = data;
-            // html = html + buildBiographyList(data); 
+
+            $(document).ready(function () {
+            var imageUrl = `${data.champion.image.uri}`;
+                $(".backGroundImg").css("background-image", "url(" + imageUrl + ")");
+    });
+
+            var headerHtml = buildHeaderHtml(data);
+            document.getElementById("header").innerHTML = headerHtml;
+
             var biographyHtml = buildBiographyList(data);
             document.getElementById("biography").innerHTML = biographyHtml;
+
+            var featureVideoTagHtml = buildFeatureVideoTag(data);
+            document.getElementById("featureVideo").innerHTML = featureVideoTagHtml;
+
+            var shortVideoHtml = buildShortVideoList(data);
+            document.getElementById("video").innerHTML = shortVideoHtml;
+
+            var shortStoryHtml = buildShortStoryList(data);
+            document.getElementById("shortStory").innerHTML = shortStoryHtml;
+
+            var galleryTagHtml = buildGalleryTagHtml(data);
+            document.getElementById("galleryTag").innerHTML = galleryTagHtml;
+
+            var galleryListHtml = buildGalleryListHtml(data);
+            document.getElementById("galleryList").innerHTML = galleryListHtml;
+
+            var galleryLinkoutTagHtml = buildLinkoutTag(data);
+            document.getElementById("linkoutTag").innerHTML = galleryLinkoutTagHtml;
+
+            var galleryLinkoutListHtml = buildLinkoutList(data);
+            document.getElementById("linkoutList").innerHTML = galleryLinkoutListHtml;
+
+            var relatedChampHtml = buildRelatedChamp(data);
+            document.getElementById("exploreChamp").innerHTML = relatedChampHtml;
         });
+
+
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -524,8 +482,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script>
-
-    // call api  => https://universe-meeps.leagueoflegends.com/v1/vn_vn/champions/:champion/index.json
-    // build html
 
 </script>
