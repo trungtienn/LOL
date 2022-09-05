@@ -312,6 +312,15 @@
             return list;
         }
 
+        function handleChampionClick() {
+            $(".championClick").click(function () {
+                    // var championSlug = $(".championClick").attr("data-champion-slug");
+                    var championSlug = $(this).attr("data-champion-slug");
+                    localStorage.setItem('champion', championSlug); // set champion name
+                    window.location.href = "detail.html" // redirec 
+                });
+        }
+
         const endpoint = 'https://universe-meeps.leagueoflegends.com/v1/vn_vn/search/index.json?fbclid=IwAR2X7mom8wvysYE-QzanU5RLGKz5QvlJhH9t9U310f1Omn-vbXQBNqMd09g'
         fetch(endpoint)
             .then((response) => response.json())
@@ -320,13 +329,8 @@
                 globalData = data;
                 html = html + buildList(data);
                 document.getElementById("content").innerHTML = html;
-
-                $(".championClick").click(function () {
-                    // var championSlug = $(".championClick").attr("data-champion-slug");
-                    var championSlug = $(this).attr("data-champion-slug");
-                    localStorage.setItem('champion', championSlug); // set champion name
-                    window.location.href = "detail.html" // redirec 
-                });
+                handleChampionClick();
+                
             });
 
         $("#myInput").on("change paste keyup", function () {
@@ -364,6 +368,7 @@
                     globalData = data;
                     sortListHtml = sortListHtml + buildList(data);
                     document.getElementById("content").innerHTML = sortListHtml;
+                    handleChampionClick();
                 });
             $("#myInput").val(null);
 
@@ -377,6 +382,7 @@
                     globalData = data;
                     newlist = newlist + buildList(data);
                     document.getElementById("content").innerHTML = newlist;
+                    handleChampionClick();
                 });
             $("#myInput").val(null);
         });

@@ -30,7 +30,7 @@
 </body>
 <script>
 
-    
+    let globalData = {};
 
     function buildHeaderHtml(data) {
         return `<div class="headerTitle">
@@ -41,7 +41,7 @@
             </div>`;
     }
 
-    
+
 
 
     function buildBioMainHtml(data) {
@@ -88,7 +88,7 @@
         let relatedChamp = `<div class="championRace margin"><div class="race"><h6 class="relatedText">TƯỚNG LIÊN QUAN</h6>`;
         for (let i = 0; i < data['related-champions'].length; i++) {
             relatedChamp = relatedChamp + `<div>
-                                    <div class="imageChamp circle relatedImgChamp"
+                                    <div class="imageChamp circle relatedImgChamp" 
                                         data-am-url="${data['related-champions'][i].image.uri}"
                                         style="background-image: url(&quot;${data['related-champions'][i].background.uri}&quot;);">
                                     </div>
@@ -281,9 +281,17 @@
 
         for (let i = 0; i < data.modules.length; i++) {
             if (data.modules[i].type == 'image-gallery') {
+                var galleryTagHtml = buildGalleryTagHtml(data);
+                document.getElementById("galleryTag").innerHTML = galleryTagHtml;
+                break;
+            }
+        };
+
+        for (let i = 0; i < data.modules.length; i++) {
+            if (data.modules[i].type == 'image-gallery') {
                 for (let a = 0; a < data.modules[i].assets.length; a++) {
-                    html = html + `<div class="col-4 zoom">
-                    <img class="galleryImage"
+                    html = html + `<div class="col-4">
+                    <img class="galleryImage zoom"
                         src="${data.modules[i].assets[a].uri}">
                 </div>`;
                 }
@@ -319,9 +327,19 @@
     function buildLinkoutList(data) {
 
         let html = ``;
+        var galleryLinkoutTagHtml = buildLinkoutTag(data);
+        // document.getElementById("linkoutTag").innerHTML = galleryLinkoutTagHtml;
 
         for (let i = 0; i < data.modules.length; i++) {
             if (data.modules[i].type == 'link-out') {
+                document.getElementById("linkoutTag").innerHTML = galleryLinkoutTagHtml;
+                break;
+            }
+        };
+
+        for (let i = 0; i < data.modules.length; i++) {
+            if (data.modules[i].type == 'link-out') {
+
                 html = html + `<div class="container_fluid">
             <div class="detailGrid">
                 <div class="containerSmall championRace storyBox zoom"
@@ -403,9 +421,8 @@
             <div class="detailGrid">
                 <div class="row">`;
         for (let i = 0; i < data['explore-champions'].length; i++) {
-            html = html + `<div class="col-12 col-md-6">
+            html = html + `<div class="col-12 col-md-6 championClick" data-champion-slug="${data['explore-champions'][i].slug}">
 <div class="championRace margin zoom">
-    <a href="https://universe.leagueoflegends.com/vn_VN/champion/${data['explore-champions'][i].slug}/">
         <img class="champDiscoverImg"
             src="${data['explore-champions'][i].image.uri}">
         <div class="championRace">
@@ -414,7 +431,6 @@
                 <span>${data['explore-champions'][i]['associated-faction-slug']}</span>
             </div>
         </div>
-    </a>
 </div>
 
 </div>`;
@@ -424,6 +440,7 @@
         return html;
     }
 
+
     var championSlug = localStorage.getItem('champion');
     const endpoint = `https://universe-meeps.leagueoflegends.com/v1/vn_vn/champions/${championSlug}/index.json`
     fetch(endpoint)
@@ -431,9 +448,9 @@
         .then((data) => {
 
             $(document).ready(function () {
-            var imageUrl = `${data.champion.image.uri}`;
+                var imageUrl = `${data.champion.image.uri}`;
                 $(".backGroundImg").css("background-image", "url(" + imageUrl + ")");
-    });
+            });
 
             var headerHtml = buildHeaderHtml(data);
             document.getElementById("header").innerHTML = headerHtml;
@@ -450,23 +467,29 @@
             var shortStoryHtml = buildShortStoryList(data);
             document.getElementById("shortStory").innerHTML = shortStoryHtml;
 
-            var galleryTagHtml = buildGalleryTagHtml(data);
-            document.getElementById("galleryTag").innerHTML = galleryTagHtml;
+            
 
             var galleryListHtml = buildGalleryListHtml(data);
             document.getElementById("galleryList").innerHTML = galleryListHtml;
 
-            var galleryLinkoutTagHtml = buildLinkoutTag(data);
-            document.getElementById("linkoutTag").innerHTML = galleryLinkoutTagHtml;
+
 
             var galleryLinkoutListHtml = buildLinkoutList(data);
             document.getElementById("linkoutList").innerHTML = galleryLinkoutListHtml;
 
             var relatedChampHtml = buildRelatedChamp(data);
             document.getElementById("exploreChamp").innerHTML = relatedChampHtml;
+            handleChampionClick()
         });
 
-
+    function handleChampionClick() {
+        $(".championClick").click(function () {
+            // var championSlug = $(".championClick").attr("data-champion-slug");
+            var championSlug = $(this).attr("data-champion-slug");
+            localStorage.setItem('champion', championSlug); // set champion name
+            window.location.href = "detail.html" // redirec 
+        });
+    }
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
