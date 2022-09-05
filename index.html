@@ -300,13 +300,14 @@
             let list = ''; console.log(data.champions);
             for (var i = 0; i < data.champions.length; i++) {
                 var championItem = data.champions[i];
-                list = list + `<div class="col-12 col-md-3 zoom marginBot championClick" data-champion-slug="${championItem.slug}">
+                list = list + `<div class="col-12 col-md-3 marginBot championClick" data-champion-slug="${championItem.slug}">
+                    <div class="zoom">
                 <img class="charImg" style="object-position:62.5% 27.7778%"
                     src="${championItem.image.uri}">
                 <div class="objectName">
                     <h5>${championItem.title}</h5>
                 </div>
-                </a>
+                </div>
             </div>`
             }
             return list;
